@@ -4,45 +4,36 @@
 
 {% block body %}
 
-<body>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('images/form-v9.jpg')">
+			<form class="form-detail" action="#" method="post">
+				<h2>Registration Form</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="full-name" id="full-name" class="input-text" placeholder="Your Name" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="your-email" id="your-email" class="input-text" placeholder="Your Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="password" name="password" id="password" class="input-text" placeholder="Your Password" required>
+					</div>
+					<div class="form-row">
+						<input type="password" name="comfirm-password" id="comfirm-password" class="input-text" placeholder="Comfirm Password" required>
+					</div>
+				</div>
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- T
 
-    <div class="main">
-
-        <div class="container">
-            <div class="signup-content">
-                <form method="POST" id="signup-form" class="signup-form">
-                    <h2>Sign up </h2>
-                    <p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
-                        <a href="#" class="submit-link submit">Sign in</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- JS -->
-    <script src="vendor1/jquery/jquery.min.js"></script>
-    <script src="js1/main.js"></script>
-</body>
-
-
+ {# 
   {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
@@ -54,4 +45,6 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+#}
 {% endblock %}
+ 
