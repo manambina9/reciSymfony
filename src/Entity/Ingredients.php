@@ -24,7 +24,7 @@ class Ingredients
     #[Assert\NotNull()]
     #[Assert\NotBlank()]
     #[Assert\LessThan(value: 200)] // Correction de la syntaxe
-    private ?float $price = null;
+    private ?float $prix = null;
 
     #[ORM\Column]
     #[Assert\NotNull()]
@@ -52,14 +52,14 @@ class Ingredients
         return $this;
     }
 
-    public function getPrice(): ?float
+    public function getprix(): ?float
     {
-        return $this->price;
+        return $this->prix;
     }
 
-    public function setPrice(float $price): static
+    public function setprix(float $price): static
     {
-        $this->price = $price;
+        $this->prix = $price;
 
         return $this;
     }
