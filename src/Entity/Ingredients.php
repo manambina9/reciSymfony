@@ -64,12 +64,12 @@ class Ingredients
         return $this;
     }
 
-    public function getDatcre(): ?\DateInterval
+    public function getDatcre(): ?\DateTimeImmutable
     {
         return $this->datcre;
     }
 
-    public function setDatcre(\DateInterval $datcre): static
+    public function setDatcre(\DateTimeImmutable $datcre): static
     {
         $this->datcre = $datcre;
 

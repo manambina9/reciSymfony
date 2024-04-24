@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cours Symfony {% endblock %}
+
+
+{% block body %}
+    <div class="container " >
+        <h1> Mes ingredients</h1>
+
+        <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Numeros</th>
+      <th scope="col">Nom</th>
+      <th scope="col"> Prix</th>
+      <th scope="col">Date de Creation </th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for ingredients in ingredient %}
+            <tr class="table-light " style="border-radius:20px">
+            <th scope="row">{{ingredients.id}}</th>
+            <td> {{ingredients.nom}}</td>
+            <td> {{ingredients.prix}}</td>
+            <td> {{ingredients.Datcre|date("d/m/Y")}}</td>
+            </tr>
+        {% endfor %}
+  </tbody>
+</table>
+
+<div class="navigation">
+    {{ knp_pagination_render(ingredient) }}
+</div>
+    </div>
+{% endblock %}
