@@ -50,7 +50,11 @@ class IngredientType extends AbstractType
             ])
             ->add('sumbit', SubmitType::class, [
                 'attr' => [
+<<<<<<< HEAD
                     'class' => 'btn btn-primary'
+=======
+                    'class' => 'btn btn-primary mt-4'
+>>>>>>> 61768707370f02b9bcd3f3d1886598b157c5cea5
                 ],
                 'label' => ' Creer mon ingredient',
             ])

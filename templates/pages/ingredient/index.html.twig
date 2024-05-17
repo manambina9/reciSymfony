@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {% block title %}Cours Symfony {% endblock %}
 
@@ -8,6 +9,18 @@
     {% if not ingredient.items is same as ([]) %}
 
       <h1 class="mt -4"> Mes ingredients</h1>
+=======
+{% extends 'base.html.twig' %}
+
+{% block title %}Cours Symfony {% endblock %}
+
+
+{% block body %}
+    <div class="container "style="margin-top:30px" >
+    {% if not ingredient.items is same as ([]) %}
+
+      <h1> Mes ingredients</h1>
+>>>>>>> 61768707370f02b9bcd3f3d1886598b157c5cea5
 
       <table class="table table-hover mt-4 ">
         <thead>
@@ -37,4 +50,7 @@
     {% endif %}
     </div>
 {% endblock %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 61768707370f02b9bcd3f3d1886598b157c5cea5
